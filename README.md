@@ -7,12 +7,11 @@ solutions one can find is based on hardware [SimpleOS, RaspiReseter]. Nonetheles
 utilize Linux scripting magic for watching the failure and make the restart happen in a 
 separate thread.
 
-Create a shell script in SimpleMining OS:
-$>cd /root/utils/
-$>sudo nano watchdog_error.sh 
-// You can add more error "Binary file (standard input) matches|{ADD MORE}"
-
-```
+- Create a shell script in SimpleMining OS: <br/>
+```$>cd /root/utils/``` <br/>
+```$>sudo nano watchdog_error.sh ``` <br/>
+* You can add more error "Binary file (standard input) matches|{ADD MORE}" <br/>
+```bash
 #!/bin/bash
 
 export DISPLAY=:0
@@ -26,14 +25,14 @@ then
 fi
 ```
 
-- Activate Crontab
-$> sudo crontab -e
+* Activate Crontab <br/>
+```$> sudo crontab -e```
 
-- Add the line below (without quotes) to run every 15 mins to make sure the error is not existing.
-"*/15 * * * * bash /root/utils/watchdog_error.sh"
+* Add the line below (without quotes) to run every 15 mins to make sure the error is not existing. <br/>
+```"*/15 * * * * bash /root/utils/watchdog_error.sh"```
 
-- Start the crontab
-/etc/init.d/cron start
+* Start the crontab <br/>
+```/etc/init.d/cron start```
 
-- Add one line to make sure restart the cron after reboot and add this line before exit 0
-/etc/init.d/cron start
+* Add one line to make sure restart the cron after reboot and add this line before exit 0 <br/>
+```/etc/init.d/cron start```
