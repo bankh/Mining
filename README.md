@@ -34,5 +34,5 @@ fi
 * Start the crontab <br/>
 ```/etc/init.d/cron start```
 
-* Add one line in */etc/rc.local* to make sure restart the cron after reboot and add this line before exit 0 <br/>
+* Add one line in */etc/rc.local* to make sure restart CronTab after reboot and add this line before exit 0 <br/>
 ```/etc/init.d/cron start```
