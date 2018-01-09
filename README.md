@@ -12,7 +12,7 @@ $>cd /root/utils/
 $>sudo nano watchdog_error.sh 
 // You can add more error "Binary file (standard input) matches|{ADD MORE}"
 
-'''
+```
 #!/bin/bash
 
 export DISPLAY=:0
@@ -24,7 +24,7 @@ then
  echo "ERROR, miner forced reboot"
  sudo shutdown -r now
 fi
-'''
+```
 
 - Activate Crontab
 $> sudo crontab -e
